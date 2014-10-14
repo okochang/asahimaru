@@ -15,3 +15,10 @@ template "httpd.conf" do
   mode 0644
   notifies :reload, 'service[httpd]'
 end
+
+cookbook_file "/var/www/html/index.html" do
+  source "index.html"
+  mode 00644
+  owner "root"
+  group "root"
+end
