@@ -15,4 +15,3 @@ template "httpd.conf" do
   mode 0644
   notifies :reload, 'service[httpd]'
 end
-end
